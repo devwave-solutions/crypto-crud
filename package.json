@@ -1,0 +1,49 @@
+{
+  "name": "crypto-crud",
+  "version": "1.0.0",
+  "description": "restful api built on node, express, and typescript",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist/*",
+    "lint": "tslint -c tslint.json -p tsconfig.json --fix",
+    "tsc": "tsc",
+    "build": "npm-run-all clean tsc",
+    "dev:start": "npm-run-all build start",
+    "dev": "nodemon --watch src -e ts --exec npm run dev:start",
+    "start": "node ./dist/.",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devwave-solutions/crypto-crud.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devwave-solutions/crypto-crud/issues"
+  },
+  "homepage": "https://github.com/devwave-solutions/crypto-crud#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "eslint": "^8.18.0",
+    "express": "^4.18.1",
+    "helmet": "^5.1.0",
+    "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.13",
+    "@types/fs-extra": "^9.0.13",
+    "@types/node": "^16.11.41",
+    "@types/shelljs": "^0.8.11",
+    "fs-extra": "^10.1.0",
+    "nodemon": "^2.0.16",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "shelljs": "^0.8.5",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.4"
+  }
+}
